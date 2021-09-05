@@ -22,7 +22,7 @@ public class EventCalculation {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void countTotalEvent(int startYear, int endYear) {
+    public int[] countTotalEvent(int startYear, int endYear) {
         int countTotal = 0;
         int countRelaxEvent = 0;
         int temp = startYear;
@@ -36,8 +36,9 @@ public class EventCalculation {
             temp++;
         }
 
-        System.out.println("Total event: " + countTotal);
+        Log.d("TTT", "Total event: " + countTotal);
         Log.d("TTT", "Total relax start: " + countRelaxEvent);
+        return new int[]{countTotal,countRelaxEvent};
     }
 
 

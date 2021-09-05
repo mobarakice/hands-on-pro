@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
             if (input != null && !input.isEmpty()) {
                 val arr = input.split(",");
                 val a = arr[0].toInt();
-                val b = arr[0].toInt();
-                EventCalculation().countTotalEvent(a, b);
+                val b = arr[1].toInt();
+                val output = EventCalculation().countTotalEvent(a, b);
+                tv1.text = "Total event ${output[0]}";
+                tv2.text = "Total relax start ${output[1]}";
             }
         }
     }
